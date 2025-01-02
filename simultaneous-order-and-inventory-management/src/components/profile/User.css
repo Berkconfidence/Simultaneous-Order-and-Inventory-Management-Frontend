@@ -1,0 +1,23 @@
+/* Kullanıcı bilgileri stili */
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-photo {
+  margin-right: 1rem;
+  margin-top: 5px;
+}
+
+.user-details p {
+  margin: 0.2rem 0;
+  display: flex; /* Flex kullanarak hizalamayı sağla */
+  justify-content: flex-start; /* Sol tarafa hizala */
+}
+
+.user-details p strong {
+  min-width: 100px; /* Her bir başlığın genişliğini ayarla */
+  text-align: left; /* Başlıkları sola hizala */
+  margin-right: 10px; /* Başlık ile değer arasında boşluk ekle */
+}
+

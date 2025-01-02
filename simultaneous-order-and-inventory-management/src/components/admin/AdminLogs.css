@@ -1,0 +1,89 @@
+.admin-logs-page {
+    padding: 20px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between; /* Başlık ve arama alanını iki yana yay */
+    align-items: center; /* Dikeyde ortala */
+    margin-top: 50px; /* Başlık ve ürünler arasında boşluk ekle */
+    margin-bottom: 15px;
+}
+  
+.admin-logs-title {
+    flex: 1; /* Başlık alanını genişlet */
+    text-align: center; /* Ortala */
+    font-size: 1.75rem;
+    margin-right: 280px;
+}
+
+.admin-search-input {
+    flex: 1; /* Arama çubuğunu genişlet */
+    max-width: 200px; /* Maksimum genişlik belirle */
+    height: 35px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Sol tarafla biraz boşluk bırak */
+    margin-top: 10px;
+}
+
+.admin-select-input {
+    flex: 1; /* Arama çubuğunu genişlet */
+    max-width: 135px; /* Maksimum genişlik belirle */
+    height: 35px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Sol tarafla biraz boşluk bırak */
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.admin-table-container {
+    margin-top: 20px; /* Başlık ve navbar ile tablo arasına boşluk bırak */
+    overflow-x: auto;
+}
+
+.admin-logs-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.admin-logs-table thead th {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.admin-logs-table tbody tr {
+    border: 1px solid #ddd;
+}
+
+.admin-logs-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternatif satır rengi */
+}
+
+.admin-logs-table tbody tr:hover {
+    background-color: #f1f1f1; /* Hover rengi */
+}
+
+.admin-logs-table td {
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+}
+
+
+/* Sütun genişliklerini ayarla */
+.admin-logs-table th:nth-child(8), td:nth-child(8) {
+    width: 450px; 
+}
+
+

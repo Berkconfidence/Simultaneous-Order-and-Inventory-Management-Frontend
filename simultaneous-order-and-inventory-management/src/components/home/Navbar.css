@@ -1,0 +1,317 @@
+/* Tarayıcı varsayılan stilini sıfırla */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Navbar stili */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem; /* Sağ ve sol iç boşluk */
+  background-color: #02366d;
+  color: white;
+  position: fixed; /* Ekranın üstüne yapışık kalır */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ekranın tamamını kapla */
+  z-index: 1000;
+  height: 50px; /* Yükseklik belirle */
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center; /* Dikey hizalamayı ortalar */
+  gap: 0.5rem; /* Profil fotoğrafı ile buton arasında boşluk */
+}
+
+.navbar-left .profile-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white; /* Çerçeve */
+}
+
+.navbar-left .home-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold; /* Buton yazısını daha belirgin yapar */
+  padding: 0.3rem 0.5rem; /* Butona biraz iç boşluk ekler */
+}
+
+.navbar-left .home-button:hover {
+  text-decoration: underline; /* Üzerine gelindiğinde altı çizilir */
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logout-button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+}
+
+.logout-button:hover {
+  background-color: white;
+  color: #02366d;
+}
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.45rem;
+  margin-top: 3px;
+}
+
+.navbar-icon-profileicon{
+  width: 24px;
+  height: 24px;
+  margin-right: 0.45rem;
+  margin-top: 1px;
+  margin-left: 0.25rem;
+}
+
+
+/* Card container stili */
+.home-page .card-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-top: 60px;
+}
+
+.home-page .card-container-2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-top: 10px;
+}
+
+.home-page .card {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  flex: 1;
+  margin: 0 0.5rem;
+  height: 250px;
+}
+
+.home-page .card-1 {
+  flex: 1;
+  border-radius: 12px; /* Kenar yuvarlama */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+  transition: transform 0.2s; /* Geçiş efekti */
+}
+
+.home-page .card-1:hover {
+  transform: scale(1.02); /* Üzerine gelindiğinde büyüme efekti */
+}
+
+.home-page .card-2 {
+  flex: 1;
+}
+
+.home-page .card-3 {
+  flex: 1;
+}
+
+.home-page .card-4 {
+  flex: 2;
+  height: 300px;
+}
+
+.home-page .card-5 {
+  flex: 1;
+  height: 300px;
+}
+
+
+/* Kullanıcı bilgileri stili */
+.home-page .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.home-page .user-photo {
+  margin-right: 1rem;
+  margin-top: 5px;
+}
+
+.home-page .user-details p {
+  margin: 0.2rem 0;
+  display: flex; /* Flex kullanarak hizalamayı sağla */
+  justify-content: flex-start; /* Sol tarafa hizala */
+}
+
+.home-page .user-details p strong {
+  min-width: 100px; /* Her bir başlığın genişliğini ayarla */
+  text-align: left; /* Başlıkları sola hizala */
+  margin-right: 10px; /* Başlık ile değer arasında boşluk ekle */
+}
+
+.home-page .profile-divider {
+  height: 2px; /* Şeridin yüksekliği */
+  background-color: #02366d; /* Şeridin rengi */
+  margin-top: 10px;
+}
+
+
+/* İlerleme çubukları stili */
+.home-page .progress-header {
+  display: flex;
+  justify-content: space-around; /* Yan yana hizala */
+}
+
+.home-page .progress-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.home-page .progress-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(#4caf50 calc(var(--progress) * 1%), #e0e0e0 0);
+  position: relative;
+  margin: 0 35px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-page .progress-circle::before {
+  content: '';
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.home-page .progress-circle::after {
+  content: attr(data-progress);
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+}
+
+
+/* Log paneli stili */
+.home-page .log-container {
+  height: 85%;
+  overflow-y: auto;
+  margin-top: 5px;
+}
+
+.home-page .log-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Ürün tablosu stili */
+.home-page .table-container {
+  max-height: 200px; /* Tablo yüksekliğini ayarla */
+  overflow-y: auto; /* Dikey kaydırma */
+}
+
+.home-page .product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.home-page .product-table th, .home-page .product-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center; /* Ortala */
+}
+
+.home-page .product-table th {
+  background-color: #f0f0f0;
+}
+
+.home-page .product-table td {
+  position: relative; /* Sağ oka göre konumlandırma */
+}
+
+.home-page .product-table td button {
+  padding: 0.3rem 0.5rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; /* Ortala */
+}
+
+.home-page .product-table td .arrow-right {
+  position: absolute;
+  right: 10px; /* Sağdan boşluk */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.home-page .product-table td button:hover {
+  background-color: #45a049;
+}
+
+
+/* Sipariş Detayları stili */
+.home-page .order-details {
+  padding: 1rem;
+}
+
+.home-page .order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.home-page .order-table th, .home-page .order-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center; /* Ortala */
+}
+
+.home-page .order-table th {
+  background-color: #f0f0f0;
+}

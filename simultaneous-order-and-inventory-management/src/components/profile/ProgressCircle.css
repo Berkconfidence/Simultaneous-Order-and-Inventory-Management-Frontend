@@ -1,0 +1,42 @@
+/* İlerleme çubukları stili */
+  .progress-header {
+    display: flex;
+    justify-content: space-around; /* Yan yana hizala */
+  }
+  
+  .progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .progress-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(#4caf50 calc(var(--progress) * 1%), #e0e0e0 0);
+    position: relative;
+    margin: 0 35px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .progress-circle::before {
+    content: '';
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  
+  .progress-circle::after {
+    content: attr(data-progress);
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+  }

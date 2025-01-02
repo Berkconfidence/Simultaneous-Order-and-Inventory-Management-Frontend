@@ -1,0 +1,67 @@
+/* Card container stili */
+ .card-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 60px;
+  }
+  
+  .card-container-2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 10px;
+  }
+  
+  .card {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    flex: 1;
+    margin: 0 0.5rem;
+    height: 250px;
+  }
+  
+  .card-1 {
+    flex: 1;
+    border-radius: 12px; /* Kenar yuvarlama */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    transition: transform 0.2s; /* Geçiş efekti */
+    height: 300px;
+  }
+  
+  .card-1:hover {
+    transform: scale(1.02); /* Üzerine gelindiğinde büyüme efekti */
+  }
+  
+  .card-2 {
+    flex: 2;
+    height: 300px;
+  }
+  
+  .card-3 {
+    flex: 1;
+    border-radius: 12px; /* Kenar yuvarlama */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    transition: transform 0.2s; /* Geçiş efekti */
+    height: 300px;
+  }
+
+  .card-3:hover {
+    transform: scale(1.02); /* Üzerine gelindiğinde büyüme efekti */
+  }
+  
+  .card-4 {
+    flex: 2;
+    height: 300px;
+  }
+
+
+  .profile-divider {
+    height: 2px; /* Şeridin yüksekliği */
+    background-color: #02366d; /* Şeridin rengi */
+    margin-top: 10px;
+  }
+
+  

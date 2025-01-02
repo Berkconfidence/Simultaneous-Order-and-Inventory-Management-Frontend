@@ -1,0 +1,92 @@
+/* Ürün tablosu stili */
+.table-container {
+    max-height: 235px; /* Tablo yüksekliğini ayarla */
+    overflow-y: auto; /* Dikey kaydırma */
+  }
+  
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+
+  .product-table td, .product-table th {
+    border: 1px solid #ccc;
+    padding: 0; /* Hücre içindeki boşlukları kaldır */
+    text-align: center;
+    vertical-align: middle; /* İçeriği dikeyde ortala */
+    width: 100px; /* Sabit genişlik (isteğe göre ayarlayın) */
+    height: 50px; /* Sabit yükseklik (isteğe göre ayarlayın) */
+}
+
+  .product-table td img {
+    width: 100%; /* Hücre genişliğini kapla */
+    height: 100%; /* Hücre yüksekliğini kapla */
+    object-fit: cover; /* Görselin hücreye sığması için ölçekle */
+    display: block; /* Görseli tam hizala */
+  }
+
+  
+  .product-table th {
+    background-color: #f0f0f0;
+  }
+  
+  .product-table tbody tr {
+    background-color: rgba(128, 128, 128, 0.1); /* Transparan gri arka plan */
+  }
+  
+  .product-table tbody tr:nth-child(even) {
+    background-color: rgba(128, 128, 128, 0.2); /* Alternatif satır rengi */
+  }
+  
+  .product-table td button {
+    padding: 0.3rem 0.5rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Ortala */
+  }
+  
+  .product-table td button:hover {
+    background-color: #45a049;
+  }
+
+  .quantity-select {
+    width: 50%;
+    height: 50%;
+    border: 1px solid rgb(74, 12, 12); /* Beyaz kenarlık */
+    background-color: rgba(128, 128, 128, 0.1); /* Hücreyle aynı arka plan rengi */
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  /* Sipariş durumu stili */
+  .order-status {
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    color: white;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+  }
+
+  .order-status.completed {
+    background-color: #4caf50; /* Yeşil */
+  }
+
+  .order-status.processing {
+    background-color: #ffeb3b; /* Sarı */
+    color: black; /* Sarı arka plan için siyah yazı rengi */
+  }
+
+  .order-status.cancelled {
+    background-color: #f44336; /* Kırmızı */
+  }
